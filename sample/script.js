@@ -347,56 +347,67 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==================== AUDIO TOGGLE (placeholder) ====================
     const audioToggle = document.getElementById('audio-toggle');
     let audioPlaying = false;
-
-    // Create a simple ambient context (Web Audio API)
-    let audioCtx = null;
-
+    
+    // Playlist configuration
+    const soundtrack_ids = [
+        'soundtrack-0',
+        'soundtrack-1',
+        'soundtrack-2',
+        'soundtrack-3',
+        'soundtrack-4'
+    ];
+    const soundtracks = soundtrack_ids.map(id => document.getElementById(id));
+    
+    let currentTrackIndex = 0;
+    let lastPlayPosition = { trackIndex: 0, time: 0 };
+    
+    // Stop all tracks
+    function stopAllTracks() {
+        soundtracks.forEach(track => {
+            track.pause();
+            track.currentTime = 0;
+        });
+    }
+    
+    // Play a specific track at a given time
+    function playTrack(trackIndex, startTime = 0) {
+        stopAllTracks();
+        currentTrackIndex = trackIndex;
+        const currentTrack = soundtracks[currentTrackIndex];
+        currentTrack.currentTime = startTime;
+        currentTrack.play();
+    }
+    
+    // Move to next track when current ends
+    soundtracks.forEach((track, index) => {
+        track.addEventListener('ended', () => {
+            if (audioPlaying) {
+                const nextIndex = (index + 1) % soundtracks.length;
+                lastPlayPosition = { trackIndex: nextIndex, time: 0 };
+                playTrack(nextIndex, 0);
+            }
+        });
+    });
+    
+    // Handle audio toggle button
     audioToggle.addEventListener('click', () => {
         audioPlaying = !audioPlaying;
         const icon = audioToggle.querySelector('.audio-icon');
         
         if (audioPlaying) {
             icon.textContent = '🔊';
-            // You could load an actual GOW ambient audio file here
-            if (!audioCtx) {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            }
-            // Play ambient drone
-            playAmbientDrone();
+            // Resume from last saved position
+            playTrack(lastPlayPosition.trackIndex, lastPlayPosition.time);
         } else {
             icon.textContent = '🔇';
-            if (audioCtx) {
-                audioCtx.close();
-                audioCtx = null;
-            }
+            // Save current position before stopping
+            lastPlayPosition = {
+                trackIndex: currentTrackIndex,
+                time: soundtracks[currentTrackIndex].currentTime
+            };
+            stopAllTracks();
         }
     });
-
-    function playAmbientDrone() {
-        if (!audioCtx) return;
-        
-        const oscillator = audioCtx.createOscillator();
-        const gainNode = audioCtx.createGain();
-        
-        oscillator.type = 'sine';
-        oscillator.frequency.setValueAtTime(65, audioCtx.currentTime); // Low drone
-        gainNode.gain.setValueAtTime(0.05, audioCtx.currentTime);
-        
-        oscillator.connect(gainNode);
-        gainNode.connect(audioCtx.destination);
-        
-        oscillator.start();
-
-        // Second harmonic
-        const osc2 = audioCtx.createOscillator();
-        const gain2 = audioCtx.createGain();
-        osc2.type = 'sine';
-        osc2.frequency.setValueAtTime(98, audioCtx.currentTime);
-        gain2.gain.setValueAtTime(0.03, audioCtx.currentTime);
-        osc2.connect(gain2);
-        gain2.connect(audioCtx.destination);
-        osc2.start();
-    }
 
     // ==================== MOUSE TRAIL EFFECT (subtle) ====================
     document.addEventListener('mousemove', (e) => {
