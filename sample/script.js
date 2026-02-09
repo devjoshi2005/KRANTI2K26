@@ -23,8 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==================== BACKGROUND SLIDESHOW ====================
     const slides = document.querySelectorAll('.bg-slide');
     const realmNames = [
-        'IMAGE 1',
-        'IMAGE 2'
+        'MIDGARD PLAINS',
+        'MOUNT OLYMPUS',
+        'ALFHEIM LIGHT',
+        'MUSPELHEIM FIRE',
+        'JOTUNHEIM FROST',
+        'HALLS OF HADES'
     ];
     const realmNameEl = document.getElementById('current-realm');
     let currentSlide = 0;
@@ -427,30 +431,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==================== DYNAMIC BACKGROUND GRADIENTS ====================
-    // Add subtle color shifts to bg slides based on their realm
+    // Add subtle color shifts to bg slides based on their realm (maps data-realm -> color)
     const bgOverlays = document.querySelectorAll('.bg-overlay');
-    
-    const realmColors = {
-        olympus: 'rgba(106, 13, 173, 0.15)',
-        hades: 'rgba(139, 0, 0, 0.2)',
-        midgard: 'rgba(46, 125, 50, 0.1)',
-        alfheim: 'rgba(79, 195, 247, 0.1)',
-        muspelheim: 'rgba(230, 81, 0, 0.15)',
-        jotunheim: 'rgba(79, 195, 247, 0.12)'
+
+    const realmColorMap = {
+        img1: 'rgba(106, 13, 173, 0.15)',
+        img2: 'rgba(139, 0, 0, 0.2)',
+        img3: 'rgba(46, 125, 50, 0.1)',
+        img4: 'rgba(79, 195, 247, 0.1)',
+        img5: 'rgba(230, 81, 0, 0.15)',
+        img6: 'rgba(79, 195, 247, 0.12)'
     };
 
     slides.forEach(slide => {
         const realm = slide.getAttribute('data-realm');
         const overlay = slide.querySelector('.bg-overlay');
-        if (realmColors[realm]) {
-            overlay.style.background = `
-                linear-gradient(180deg,
-                    rgba(10, 10, 15, 0.6) 0%,
-                    ${realmColors[realm]} 40%,
-                    rgba(10, 10, 15, 0.5) 60%,
-                    rgba(10, 10, 15, 0.9) 100%
-                )
-            `;
+        const color = realmColorMap[realm];
+        if (color && overlay) {
+            overlay.style.background = `\n                linear-gradient(180deg,\n                    rgba(10, 10, 15, 0.6) 0%,\n                    ${color} 40%,\n                    rgba(10, 10, 15, 0.5) 60%,\n                    rgba(10, 10, 15, 0.9) 100%\n                )\n            `;
         }
     });
 
