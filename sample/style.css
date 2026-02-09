@@ -20,6 +20,7 @@
     --dark-card: #16161F;
     --dark-card-hover: #1C1C28;
     --text-primary: #E8E6E3;
+    --text-primary-heading: #E65100;
     --text-secondary: #A09B94;
     --text-muted: #D4A843;
     --norse-green: #2E7D32;
@@ -716,6 +717,13 @@ img {
     font-size: clamp(14px, 2vw, 20px);
     letter-spacing: 6px;
     color: var(--text-primary);
+    margin-bottom: 10px;
+}
+.hero-subtitle-heading {
+    font-family: var(--font-heading);
+    font-size: clamp(14px, 2vw, 20px);
+    letter-spacing: 6px;
+    color: var(--text-primary-heading);
     margin-bottom: 10px;
 }
 
