@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KRANTI 2K26 | Meenakshi Sundararajan Engineering College</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cinzel+Decorative:wght@400;700;900&family=MedievalSharp&family=Uncial+Antiqua&family=IM+Fell+English+SC&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- PRELOADER -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <div class="omega-symbol">Ω</div>
+            <div class="loading-text">AWAKENING THE GODS...</div>
+            <div class="loading-bar">
+                <div class="loading-bar-fill"></div>
+            </div>
+            <div class="preloader-subtitle">KRANTI 2K26</div>
+        </div>
+    </div>
+
+    <!-- FLOATING EMBERS CANVAS -->
+    <canvas id="embers-canvas"></canvas>
+
+    <!-- BACKGROUND SLIDESHOW -->
+    <div id="bg-slideshow">
+        <div class="bg-slide active" data-realm="img1">
+            <div class="bg-overlay"></div>
+        </div>
+        <div class="bg-slide" data-realm="img2">
+            <div class="bg-overlay"></div>
+        </div>
+    </div>
+
+    <!-- REALM INDICATOR -->
+    <div id="realm-indicator">
+        <span class="realm-label">REALM:</span>
+        <span class="realm-name" id="current-realm">MOUNT OLYMPUS</span>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav id="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="omega-nav">Ω</div>
+                <div class="nav-logo-text">
+                    <span class="kranti-text">KRANTI</span>
+                    <span class="year-text">2K26</span>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active" data-section="home">HOME</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">SAGA</a></li>
+                <li><a href="#department" class="nav-link" data-section="department">REALM</a></li>
+                <li><a href="#events" class="nav-link" data-section="events">TRIALS</a></li>
+                <li><a href="#timeline" class="nav-link" data-section="timeline">PROPHECY</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">SUMMON</a></li>
+            </ul>
+            <div class="nav-cta">
+                <a href="#events" class="btn-register">ENTER THE ARENA</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-link">HOME</a></li>
+            <li><a href="#about" class="mobile-link">SAGA</a></li>
+            <li><a href="#department" class="mobile-link">REALM</a></li>
+            <li><a href="#events" class="mobile-link">TRIALS</a></li>
+            <li><a href="#timeline" class="mobile-link">PROPHECY</a></li>
+            <li><a href="#contact" class="mobile-link">SUMMON</a></li>
+        </ul>
+    </div>
+
+    <!-- ================= SECTION: HERO ================= -->
+    <section id="home" class="section hero-section">
+        <div class="hero-content">
+            <div class="hero-top-badge">
+                <div class="badge-line"></div>
+                <span>DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING</span>
+                <div class="badge-line"></div>
+            </div>
+            <div class="hero-college-name">MEENAKSHI SUNDARARAJAN ENGINEERING COLLEGE</div>
+            
+            <div class="hero-title-container">
+                <div class="chain-left"></div>
+                <h1 class="hero-title">
+                    <span class="title-line-1">K R A N T I</span>
+                    <span class="title-line-2">2 K 2 6</span>
+                </h1>
+                <div class="chain-right"></div>
+            </div>
+
+            <div class="hero-subtitle-container">
+                <div class="axe-divider">
+                    <div class="divider-line"></div>
+                    <div class="axe-icon">⚔</div>
+                    <div class="divider-line"></div>
+                </div>
+                <p class="hero-subtitle">THE GODS DEMAND WORTHY CHALLENGERS</p>
+                <p class="hero-tagline">Where Mortals Rise to Forge Their Destiny</p>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="8">0</div>
+                    <div class="stat-label">DIVINE TRIALS</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">WARRIORS EXPECTED</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50000">0</div>
+                    <div class="stat-label">₹ IN GLORY</div>
+                </div>
+            </div>
+
+            <div class="hero-cta">
+                <a href="#events" class="btn-primary">
+                    <span class="btn-text">VIEW TRIALS</span>
+                    <span class="btn-icon">⚡</span>
+                </a>
+                <a href="#about" class="btn-secondary">
+                    <span class="btn-text">READ THE SAGA</span>
+                </a>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-text">DESCEND</div>
+                <div class="scroll-arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION: ABOUT / SAGA ================= -->
+    <section id="about" class="section about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="rune-decoration left">ᚱ ᚢ ᚾ ᛖ</div>
+                <h2 class="section-title">THE SAGA</h2>
+                <p class="section-subtitle">The Chronicle of Kranti 2K26</p>
+                <div class="rune-decoration right">ᛊ ᚨ ᚷ ᚨ</div>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card about-main">
+                    <div class="card-runic-border"></div>
+                    <div class="about-icon">🏛️</div>
+                    <h3>THE PROPHECY</h3>
+                    <p>From the hallowed halls of <strong>Meenakshi Sundararajan Engineering College</strong>, the Department of Computer Science & Engineering unleashes <strong>KRANTI 2K26</strong> — a symposium forged in the fires of innovation and tempered by the wisdom of ages. Like Kratos ascending Mount Olympus, our participants shall face trials that test their intellect, creativity, and spirit.</p>
+                    <p>This is not merely an event. It is a <strong>reckoning</strong>. Eight divine trials await those bold enough to answer the call. Four demand the precision of Hephaestus's craft (Technical), and four demand the cunning of Loki himself (Non-Technical).</p>
+                </div>
+
+                <div class="about-card about-side">
+                    <div class="card-runic-border"></div>
+                    <div class="about-icon">⚡</div>
+                    <h3>THE VISION</h3>
+                    <p>To bridge the ancient wisdom of education with the boundless frontier of technology. Every line of code is a rune of power. Every creative spark, a flame from Muspelheim.</p>
+                </div>
+
+                <div class="about-card about-side">
+                    <div class="card-runic-border"></div>
+                    <div class="about-icon">🔥</div>
+                    <h3>THE LEGACY</h3>
+                    <p>Year after year, Kranti has risen like the World Serpent — growing, evolving, becoming legendary. 2K26 marks our most ambitious chapter yet, themed around the greatest saga ever told.</p>
+                </div>
+            </div>
+
+            <div class="quote-banner">
+                <div class="quote-marks">"</div>
+                <blockquote>The cycle ends here. We must be better than this.</blockquote>
+                <cite>— Kratos, God of War (2018)</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION: DEPARTMENT / REALM ================= -->
+    <section id="department" class="section dept-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="rune-decoration left">ᚲ ᛊ ᛖ</div>
+                <h2 class="section-title">THE REALM OF CSE</h2>
+                <p class="section-subtitle">Forge of Knowledge & Innovation</p>
+                <div class="rune-decoration right">ᚲ ᛊ ᛖ</div>
+            </div>
+
+            <div class="dept-showcase">
+                <div class="dept-main-card">
+                    <div class="norse-frame">
+                        <div class="frame-corner tl"></div>
+                        <div class="frame-corner tr"></div>
+                        <div class="frame-corner bl"></div>
+                        <div class="frame-corner br"></div>
+                    </div>
+                    <h3 class="dept-title">DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING</h3>
+                    <p class="dept-description">Like the great World Tree Yggdrasil connecting all Nine Realms, the CSE Department at MSEC stands as the backbone connecting every domain of modern technology. With state-of-the-art labs that rival the forges of the Dwarves, faculty as wise as Mimir, and students as relentless as the Ghost of Sparta — we don't just learn technology, we <strong>conquer</strong> it.</p>
+                    
+                    <div class="dept-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🌳</div>
+                            <div class="highlight-text">
+                                <h4>Yggdrasil Labs</h4>
+                                <p>5+ Advanced Computing Laboratories equipped with cutting-edge hardware and software</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">📜</div>
+                            <div class="highlight-text">
+                                <h4>Scrolls of Mimir</h4>
+                                <p>50+ Research Papers Published | Industry-Aligned Curriculum | Expert Faculty</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">⚔️</div>
+                            <div class="highlight-text">
+                                <h4>Warriors of Code</h4>
+                                <p>95%+ Placement Record | Top MNC Recruiters | Hackathon Champions</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🏆</div>
+                            <div class="highlight-text">
+                                <h4>Halls of Valhalla</h4>
+                                <p>Award-Winning Student Projects | Active Coding Clubs | National Competition Winners</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dept-pillars">
+                <div class="pillar">
+                    <div class="pillar-icon">🤖</div>
+                    <h4>AI & ML</h4>
+                    <p>Machine Intelligence</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">🌐</div>
+                    <h4>Web & Cloud</h4>
+                    <p>Digital Architecture</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">🔒</div>
+                    <h4>Cybersecurity</h4>
+                    <p>Digital Fortification</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">📊</div>
+                    <h4>Data Science</h4>
+                    <p>Oracle Analytics</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">📱</div>
+                    <h4>App Dev</h4>
+                    <p>Mobile Realms</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon">⛓️</div>
+                    <h4>Blockchain</h4>
+                    <p>Chain of Fates</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION: EVENTS / TRIALS ================= -->
+    <section id="events" class="section events-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="rune-decoration left">ᛏ ᚱ ᛁ ᚨ ᛚ</div>
+                <h2 class="section-title">THE EIGHT TRIALS</h2>
+                <p class="section-subtitle">Prove Your Worth in the Arena of Gods</p>
+                <div class="rune-decoration right">ᛏ ᚱ ᛁ ᚨ ᛚ</div>
+            </div>
+
+            <!-- Category Tabs -->
+            <div class="event-tabs">
+                <button class="event-tab active" data-category="all">
+                    <span class="tab-rune">Ω</span> ALL TRIALS
+                </button>
+                <button class="event-tab" data-category="tech">
+                    <span class="tab-rune">⚡</span> TECHNICAL
+                </button>
+                <button class="event-tab" data-category="nontech">
+                    <span class="tab-rune">🔥</span> NON-TECHNICAL
+                </button>
+            </div>
+
+            <!-- Events Grid -->
+            <div class="events-grid" id="events-grid">
+
+                <!-- ====== TECHNICAL EVENT 1 ====== -->
+                <div class="event-card" data-category="tech" data-event="pandora">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            <div class="event-image pandora-bg">
+                                <div class="event-image-overlay"></div>
+                                <div class="event-category-badge tech">TECHNICAL</div>
+                                <div class="event-realm-tag">GOW I — Pandora's Temple</div>
+                            </div>
+                            <div class="event-info">
+                                <h3 class="event-name">PANDORA'S BOX</h3>
+                                <p class="event-type">🖥️ Coding Quest</p>
+                                <p class="event-tagline">"Each answer unlocks the next chamber of code"</p>
+                                <button class="btn-flip">VIEW RULES ⟶</button>
+                            </div>
+                        </div>
+                        <div class="event-card-back">
+                            <div class="back-header">
+                                <h3>PANDORA'S BOX</h3>
+                                <span class="back-category">CODING QUEST</span>
+                            </div>
+                            <div class="back-content">
+                                <p class="event-desc">Deep within Pandora's Temple lies a box of infinite power. To claim it, warriors must solve a chain of coding challenges where each correct solution reveals the key to the next puzzle — just as Kratos navigated the deadly traps of the temple.</p>
+                                <div class="event-rules">
+                                    <h4>⚔ RULES OF ENGAGEMENT</h4>
+                                    <ul>
+                                        <li>Solo participation — one warrior per quest</li>
+                                        <li>5 progressive coding rounds (Python / C / Java)</li>
+                                        <li>Each solution outputs a key to unlock the next challenge</li>
+                                        <li>Time limit: 90 minutes total</li>
+                                        <li>No external resources — only your mind</li>
+                                        <li>Scoring: Speed + Accuracy + Optimization</li>
+                                    </ul>
+                                </div>
+                                <div class="event-meta">
+                                    <span>👥 Solo</span>
+                                    <span>⏱ 90 min</span>
+                                    <span>🏆 ₹5000</span>
+                                </div>
+                            </div>
+                            <button class="btn-flip-back">⟵ BACK</button>
+                            <a href="#" class="btn-event-register">REGISTER NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== TECHNICAL EVENT 2 ====== -->
+                <div class="event-card" data-category="tech" data-event="bifrost">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            <div class="event-image bifrost-bg">
+                                <div class="event-image-overlay"></div>
+                                <div class="event-category-badge tech">TECHNICAL</div>
+                                <div class="event-realm-tag">GOW Ragnarök — Bifröst Bridge</div>
+                            </div>
+                            <div class="event-info">
+                                <h3 class="event-name">BIFRÖST BRIDGE</h3>
+                                <p class="event-type">🌐 Web Design Challenge</p>
+                                <p class="event-tagline">"Build the bridge between realms of creativity"</p>
+                                <button class="btn-flip">VIEW RULES ⟶</button>
+                            </div>
+                        </div>
+                        <div class="event-card-back">
+                            <div class="back-header">
+                                <h3>BIFRÖST BRIDGE</h3>
+                                <span class="back-category">WEB DESIGN</span>
+                            </div>
+                            <div class="back-content">
+                                <p class="event-desc">The Bifröst connects all Nine Realms — and your website must connect design, functionality, and innovation. Build a portal worthy of the gods using HTML, CSS, and JavaScript in a timed challenge.</p>
+                                <div class="event-rules">
+                                    <h4>⚔ RULES OF ENGAGEMENT</h4>
+                                    <ul>
+                                        <li>Team of 2 warriors</li>
+                                        <li>Topic revealed on the spot</li>
+                                        <li>Technologies: HTML, CSS, JS only</li>
+                                        <li>Time limit: 120 minutes</li>
+                                        <li>Judged on: Design, Responsiveness, Creativity, Code Quality</li>
+                                        <li>No templates or frameworks allowed</li>
+                                    </ul>
+                                </div>
+                                <div class="event-meta">
+                                    <span>👥 Team of 2</span>
+                                    <span>⏱ 120 min</span>
+                                    <span>🏆 ₹7000</span>
+                                </div>
+                            </div>
+                            <button class="btn-flip-back">⟵ BACK</button>
+                            <a href="#" class="btn-event-register">REGISTER NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== TECHNICAL EVENT 3 ====== -->
+                <div class="event-card" data-category="tech" data-event="hephaestus">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            <div class="event-image hephaestus-bg">
+                                <div class="event-image-overlay"></div>
+                                <div class="event-category-badge tech">TECHNICAL</div>
+                                <div class="event-realm-tag">GOW III — Hephaestus's Forge</div>
+                            </div>
+                            <div class="event-info">
+                                <h3 class="event-name">HEPHAESTUS'S FORGE</h3>
+                                <p class="event-type">🔧 Debugging Challenge</p>
+                                <p class="event-tagline">"Reforge the broken code into divine weapons"</p>
+                                <button class="btn-flip">VIEW RULES ⟶</button>
+                            </div>
+                        </div>
+                        <div class="event-card-back">
+                            <div class="back-header">
+                                <h3>HEPHAESTUS'S FORGE</h3>
+                                <span class="back-category">DEBUGGING</span>
+                            </div>
+                            <div class="back-content">
+                                <p class="event-desc">Hephaestus, the divine blacksmith, forged weapons for the gods from broken metal. You must take shattered code — riddled with bugs and errors — and reforge it into working programs worthy of Olympus.</p>
+                                <div class="event-rules">
+                                    <h4>⚔ RULES OF ENGAGEMENT</h4>
+                                    <ul>
+                                        <li>Solo participation</li>
+                                        <li>10 broken code snippets across multiple languages</li>
+                                        <li>Identify and fix all bugs</li>
+                                        <li>Time limit: 60 minutes</li>
+                                        <li>Points deducted for incorrect fixes</li>
+                                        <li>Bonus points for optimizing the fixed code</li>
+                                    </ul>
+                                </div>
+                                <div class="event-meta">
+                                    <span>👥 Solo</span>
+                                    <span>⏱ 60 min</span>
+                                    <span>🏆 ₹5000</span>
+                                </div>
+                            </div>
+                            <button class="btn-flip-back">⟵ BACK</button>
+                            <a href="#" class="btn-event-register">REGISTER NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== TECHNICAL EVENT 4 ====== -->
+                <div class="event-card" data-category="tech" data-event="mimir">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            <div class="event-image mimir-bg">
+                                <div class="event-image-overlay"></div>
+                                <div class="event-category-badge tech">TECHNICAL</div>
+                                <div class="event-realm-tag">GOW 2018 — Mimir's Well</div>
+                            </div>
+                            <div class="event-info">
+                                <h3 class="event-name">MIMIR'S WISDOM</h3>
+                                <p class="event-type">🧠 Tech Quiz</p>
+                                <p class="event-tagline">"The smartest man alive demands the smartest answers"</p>
+                                <button class="btn-flip">VIEW RULES ⟶</button>
+                            </div>
+                        </div>
+                        <div class="event-card-back">
+                            <div class="back-header">
+                                <h3>MIMIR'S WISDOM</h3>
+                                <span class="back-category">TECH QUIZ</span>
+                            </div>
+                            <div class="back-content">
+                                <p class="event-desc">Mimir — the smartest man alive — was the keeper of all knowledge. Channel his wisdom as you face rapid-fire technical questions spanning programming, algorithms, OS, databases, networks, and bleeding-edge tech.</p>
+                                <div class="event-rules">
+                                    <h4>⚔ RULES OF ENGAGEMENT</h4>
+                                    <ul>
+                                        <li>Team of 2 warriors</li>
+                                        <li>Round 1: Written MCQ (30 questions, 20 min)</li>
+                                        <li>Round 2: Rapid Fire (Top 6 teams)</li>
+                                        <li>Round 3: Buzzer Round (Top 3 teams)</li>
+                                        <li>Topics: DSA, DBMS, OS, Networks, AI, Web Tech</li>
+                                        <li>Negative marking in Round 1</li>
+                                    </ul>
+                                </div>
+                                <div class="event-meta">
+                                    <span>👥 Team of 2</span>
+                                    <span>⏱ 75 min</span>
+                                    <span>🏆 ₹6000</span>
+                                </div>
+                            </div>
+                            <button class="btn-flip-back">⟵ BACK</button>
+                            <a href="#" class="btn-event-register">REGISTER NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== NON-TECHNICAL EVENT 1 ====== -->
+                <div class="event-card" data-category="nontech" data-event="zeus">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            <div class="event-image zeus-bg">
+                                <div class="event-image-overlay"></div>
+                                <div class="event-category-badge nontech">NON-TECHNICAL</div>
+                                <div class="event-realm-tag">GOW II — Zeus's Throne</div>
+                            </div>
+                            <div class="event-info">
+                                <h3 class="event-name">LIGHTNING OF ZEUS</h3>
+                                <p class="event-type">⚡ Debate Competition</p>
+                                <p class="event-tagline">"Command the thunder of words and strike with logic"</p>
+                                <button class="btn-flip">VIEW RULES ⟶</button>
+                            </div>
+                        </div>
+                        <div class="event-card-back">
+                            <div class="back-header">
+                                <h3>LIGHTNING OF ZEUS</h3>
+                                <span class="back-category">DEBATE</span>
+                            </div>
+                            <div class="back-content">
+                                <p class="event-desc">Zeus commanded Olympus with the power of his voice and the strike of his bolt. In this arena of rhetoric, warriors clash with arguments as sharp as the Blade of Olympus. Wield your words — for they are your weapon.</p>
+                                <div class="event-rules">
+                                    <h4>⚔ RULES OF ENGAGEMENT</h4>
+                                    <ul>
+                                        <li>Team of 2 warriors</li>
+                                        <li>Topics assigned 15 minutes before each round</li>
+                                        <li>Format: British Parliamentary style</li>
+                                        <li>Each speaker: 4 minutes + 1 minute rebuttal</li>
+                                        <li>Judged on: Content, Delivery, Strategy, Rebuttal</li>
+                                        <li>3 rounds: Prelims → Semis → Finals</li>
+                                    </ul>
+                                </div>
+                                <div class="event-meta">
+                                    <span>👥 Team of 2</span>
+                                    <span>⏱ Half Day</span>
+                                    <span>🏆 ₹5000</span>
+                                </div>
+                            </div>
+                            <button class="btn-flip-back">⟵ BACK</button>
+                            <a href="#" class="btn-event-register">REGISTER NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== NON-TECHNICAL EVENT 2 ====== -->
+                <div class="event-card" data-category="nontech" data-event="labyrinth">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            <div class="event-image labyrinth-bg">
+                                <div class="event-image-overlay"></div>
+                                <div class="event-category-badge nontech">NON-TECHNICAL</div>
+                                <div class="event-realm-tag">GOW I — Labyrinth of Daedalus</div>
+                            </div>
+                            <div class="event-info">
+                                <h3 class="event-name">LABYRINTH'S INSTRUMENT</h3>
+                                <p class="event-type">🎵 Guess the Song</p>
+                                <p class="event-tagline">"Navigate the musical maze — one note at a time"</p>
+                                <button class="btn-flip">VIEW RULES ⟶</button>
+                            </div>
+                        </div>
+                        <div class="event-card-back">
+                            <div class="back-header">
+                                <h3>LABYRINTH'S INSTRUMENT</h3>
+                                <span class="back-category">GUESS THE SONG</span>
+                            </div>
+                            <div class="back-content">
+                                <p class="event-desc">Lost in the Labyrinth built by Daedalus, only your ears can guide you out. Listen to fragments of songs — a riff, a beat, a melody — and identify the track. Each correct guess leads you deeper. Each wrong turn... is a dead end.</p>
+                                <div class="event-rules">
+                                    <h4>⚔ RULES OF ENGAGEMENT</h4>
+                                    <ul>
+                                        <li>Team of 2 warriors</li>
+                                        <li>Round 1: Instrumental clips (2-sec snippets)</li>
+                                        <li>Round 2: Reversed audio + humming</li>
+                                        <li>Round 3: Emoji/picture song guessing</li>
+                                        <li>Genres: Tamil, Hindi, English, BGM</li>
+                                        <li>Tie-breaker: Sing the next line</li>
+                                    </ul>
+                                </div>
+                                <div class="event-meta">
+                                    <span>👥 Team of 2</span>
+                                    <span>⏱ 60 min</span>
+                                    <span>🏆 ₹4000</span>
+                                </div>
+                            </div>
+                            <button class="btn-flip-back">⟵ BACK</button>
+                            <a href="#" class="btn-event-register">REGISTER NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== NON-TECHNICAL EVENT 3 ====== -->
+                <div class="event-card" data-category="nontech" data-event="faye">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            <div class="event-image faye-bg">
+                                <div class="event-image-overlay"></div>
+                                <div class="event-category-badge nontech">NON-TECHNICAL</div>
+                                <div class="event-realm-tag">GOW 2018 — Faye's Last Wish</div>
+                            </div>
+                            <div class="event-info">
+                                <h3 class="event-name">FAYE'S CANVAS</h3>
+                                <p class="event-type">🎨 Digital Art / Photography</p>
+                                <p class="event-tagline">"Paint your story upon the walls of Jötunheim"</p>
+                                <button class="btn-flip">VIEW RULES ⟶</button>
+                            </div>
+                        </div>
+                        <div class="event-card-back">
+                            <div class="back-header">
+                                <h3>FAYE'S CANVAS</h3>
+                                <span class="back-category">DIGITAL ART / PHOTOGRAPHY</span>
+                            </div>
+                            <div class="back-content">
+                                <p class="event-desc">Faye (Laufey) left behind a mural in Jötunheim that told the story of the future. Now, you must create your own masterpiece. Express your vision through digital art or photography — tell a story that transcends words.</p>
+                                <div class="event-rules">
+                                    <h4>⚔ RULES OF ENGAGEMENT</h4>
+                                    <ul>
+                                        <li>Solo participation</li>
+                                        <li>Category A: Digital Art (any software)</li>
+                                        <li>Category B: Photography (phone/camera)</li>
+                                        <li>Theme revealed on event day</li>
+                                        <li>Submission within 90 minutes</li>
+                                        <li>Judged on: Creativity, Theme, Technique, Impact</li>
+                                    </ul>
+                                </div>
+                                <div class="event-meta">
+                                    <span>👥 Solo</span>
+                                    <span>⏱ 90 min</span>
+                                    <span>🏆 ₹4000</span>
+                                </div>
+                            </div>
+                            <button class="btn-flip-back">⟵ BACK</button>
+                            <a href="#" class="btn-event-register">REGISTER NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ====== NON-TECHNICAL EVENT 4 ====== -->
+                <div class="event-card" data-category="nontech" data-event="ragnarok">
+                    <div class="event-card-inner">
+                        <div class="event-card-front">
+                            <div class="event-image ragnarok-bg">
+                                <div class="event-image-overlay"></div>
+                                <div class="event-category-badge nontech">NON-TECHNICAL</div>
+                                <div class="event-realm-tag">GOW Ragnarök — The Final Battle</div>
+                            </div>
+                            <div class="event-info">
+                                <h3 class="event-name">RAGNARÖK SHOWDOWN</h3>
+                                <p class="event-type">🎭 Treasure Hunt + Mystery</p>
+                                <p class="event-tagline">"The end of all things... or the beginning of your legend"</p>
+                                <button class="btn-flip">VIEW RULES ⟶</button>
+                            </div>
+                        </div>
+                        <div class="event-card-back">
+                            <div class="back-header">
+                                <h3>RAGNARÖK SHOWDOWN</h3>
+                                <span class="back-category">TREASURE HUNT</span>
+                            </div>
+                            <div class="back-content">
+                                <p class="event-desc">Ragnarök — the twilight of the gods — has begun! Navigate the college campus solving riddles, cracking codes, and finding hidden artifacts. Each clue draws from mythology, technology, and wit. Only the most resourceful team survives the apocalypse.</p>
+                                <div class="event-rules">
+                                    <h4>⚔ RULES OF ENGAGEMENT</h4>
+                                    <ul>
+                                        <li>Team of 3 warriors</li>
+                                        <li>Campus-wide scavenger hunt</li>
+                                        <li>7 checkpoints with unique challenges</li>
+                                        <li>Mix of physical tasks, riddles, and tech puzzles</li>
+                                        <li>Time limit: 120 minutes</li>
+                                        <li>GPS/Phone allowed for navigation only</li>
+                                    </ul>
+                                </div>
+                                <div class="event-meta">
+                                    <span>👥 Team of 3</span>
+                                    <span>⏱ 120 min</span>
+                                    <span>🏆 ₹8000</span>
+                                </div>
+                            </div>
+                            <button class="btn-flip-back">⟵ BACK</button>
+                            <a href="#" class="btn-event-register">REGISTER NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION: TIMELINE / PROPHECY ================= -->
+    <section id="timeline" class="section timeline-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="rune-decoration left">ᚠ ᚨ ᛏ ᛖ</div>
+                <h2 class="section-title">THE PROPHECY</h2>
+                <p class="section-subtitle">The Sacred Timeline of Kranti 2K26</p>
+                <div class="rune-decoration right">ᚠ ᚨ ᛏ ᛖ</div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">🌅</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">9:00 AM</div>
+                        <h3>THE AWAKENING</h3>
+                        <p>Registration & Inauguration. The Horn of Heimdall sounds. Warriors gather at the gates of the arena.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">⚔️</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">10:00 AM</div>
+                        <h3>FIRST BLOOD</h3>
+                        <p>Technical Events Begin — Pandora's Box & Hephaestus's Forge launch simultaneously.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">🎵</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">11:30 AM</div>
+                        <h3>THE GATHERING</h3>
+                        <p>Non-Technical Events Begin — Labyrinth's Instrument & Lightning of Zeus commence.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">🍖</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">1:00 PM</div>
+                        <h3>FEAST OF VALHALLA</h3>
+                        <p>Lunch break. Replenish your strength for the battles ahead.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">🌐</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2:00 PM</div>
+                        <h3>REALM SHIFT</h3>
+                        <p>Bifröst Bridge, Mimir's Wisdom, Faye's Canvas & Ragnarök Showdown begin.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-marker">
+                        <div class="marker-icon">🏆</div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">5:00 PM</div>
+                        <h3>THE CORONATION</h3>
+                        <p>Valedictory Ceremony. Champions are crowned. The worthy receive their glory and prizes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SECTION: CONTACT / SUMMON ================= -->
+    <section id="contact" class="section contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <div class="rune-decoration left">ᛊ ᚢ ᛗ</div>
+                <h2 class="section-title">SUMMON US</h2>
+                <p class="section-subtitle">Reach Across the Realms</p>
+                <div class="rune-decoration right">ᛊ ᚢ ᛗ</div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <h3>THE SACRED COORDINATES</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">🏛️</span>
+                        <div>
+                            <h4>The Citadel</h4>
+                            <p>Meenakshi Sundararajan Engineering College<br>Kodambakkam, Chennai - 600024</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>Raven Mail</h4>
+                            <p>kranti2k26@msec.ac.in</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <h4>Horn of Heimdall</h4>
+                            <p>+91 98765 43210 (Coordinator 1)<br>+91 98765 43211 (Coordinator 2)</p>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="contact-form-card">
+                    <h3>SEND A RAVEN</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name, Warrior" required>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Raven Address (Email)" required>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your College / Realm">
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message to the Gods..." rows="4" required></textarea>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <span>UNLEASH THE RAVEN</span>
+                            <span class="btn-icon">🐦‍⬛</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="footer-omega">Ω</div>
+                    <h3>KRANTI 2K26</h3>
+                    <p>Department of Computer Science & Engineering</p>
+                    <p>Meenakshi Sundararajan Engineering College</p>
+                </div>
+                <div class="footer-links">
+                    <h4>QUICK LINKS</h4>
+                    <a href="#home">Home</a>
+                    <a href="#about">The Saga</a>
+                    <a href="#events">Events</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-events-list">
+                    <h4>EVENTS</h4>
+                    <a href="#">Pandora's Box</a>
+                    <a href="#">Bifröst Bridge</a>
+                    <a href="#">Hephaestus's Forge</a>
+                    <a href="#">Mimir's Wisdom</a>
+                    <a href="#">Lightning of Zeus</a>
+                    <a href="#">Labyrinth's Instrument</a>
+                    <a href="#">Faye's Canvas</a>
+                    <a href="#">Ragnarök Showdown</a>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <div class="divider-line"></div>
+                <div class="divider-rune">ᚠ ᚢ ᚦ ᚨ ᚱ ᚲ</div>
+                <div class="divider-line"></div>
+            </div>
+            <div class="footer-bottom">
+                <p>Forged with 🔥 by the <strong>Department of CSE</strong> | Meenakshi Sundararajan Engineering College</p>
+                <p class="footer-disclaimer">This is a fan-themed event. God of War™ is a trademark of Sony Interactive Entertainment. No copyright infringement intended.</p>
+                <p class="footer-year">© 2026 KRANTI | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AUDIO TOGGLE (ambient sound button) -->
+    <button id="audio-toggle" class="audio-btn">
+        <span class="audio-icon">🔇</span>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
