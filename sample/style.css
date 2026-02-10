@@ -1973,6 +1973,77 @@ img {
 
 /* ==================== SPECIAL EFFECTS ==================== */
 
+/* =============== ADDITIONAL RESPONSIVE / FLUID RULES =============== */
+/* Make containers fluid while preserving max width for large screens */
+.section-container {
+    width: calc(100% - 60px);
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--section-padding);
+}
+
+/* Ensure canvas and full-bleed backgrounds always cover viewport */
+#embers-canvas {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Improve nav/container padding on medium screens */
+@media (max-width: 1200px) {
+    :root {
+        --container-width: 1000px;
+        --section-padding: 80px 20px;
+    }
+    .nav-container { padding: 0 20px; }
+}
+
+/* Tablet / small laptop tweaks */
+@media (max-width: 992px) {
+    :root { --section-padding: 70px 18px; }
+    .hero-title-container { max-width: 90vw; }
+    .section-container { width: calc(100% - 36px); }
+}
+
+/* Mobile: make primary interactive elements stack and become full width */
+@media (max-width: 768px) {
+    .btn-primary,
+    .btn-secondary,
+    .btn-register,
+    .btn-event-register,
+    .btn-submit {
+        width: 100%;
+        padding: 12px 18px;
+        box-sizing: border-box;
+    }
+
+    .hero-content { padding: 0 12px; }
+    .omega-symbol { font-size: 72px; }
+    .preloader-inner .loading-bar { width: 200px; }
+    .section-container { padding: 60px 18px; }
+    .footer-top { grid-template-columns: 1fr; }
+}
+
+/* Small phones: tighten spacing and scale headings */
+@media (max-width: 420px) {
+    :root { --section-padding: 60px 12px; }
+    .title-line-1 { font-size: clamp(36px, 12vw, 72px); letter-spacing: 6px; }
+    .title-line-2 { letter-spacing: 8px; }
+    .nav-logo-text { display: none; }
+    .hamburger { right: 18px; }
+    .audio-btn { width: 40px; height: 40px; bottom: 20px; right: 20px; }
+    #realm-indicator { display: none; }
+    .hero-subtitle, .hero-subtitle-heading { font-size: 14px; letter-spacing: 3px; }
+}
+
+/* Ensure background images always use cover and are centered */
+.bg-slide,
+.event-image {
+    background-size: cover !important;
+    background-position: center center !important;
+}
+
+/* =================================================================== */
+
 /* Norse knot pattern for section separators */
 .section::before {
     content: '';
